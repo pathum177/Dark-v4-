@@ -69,7 +69,7 @@ const {
 } = require('megajs')
 const path = require('path')
 const msgRetryCounterCache = new NodeCache()
-const ownerNumber = '94756310995'
+const ownerNumber = '94773416478'
 
 
 
@@ -77,7 +77,7 @@ const ownerNumber = '94756310995'
 //===================SESSION============================
 if (!fs.existsSync(__dirname + '/lib/creds.json')) {
     if (config.SESSION_ID) {
-      const sessdata = config.SESSION_ID.replace("THARUSHA-MD=", "")
+      const sessdata = config.SESSION_ID.replace("CHAMA-MD=", "")
       const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
       filer.download((err, data) => {
         if (err) throw err
@@ -257,14 +257,14 @@ q = args.join(' ')
             const senderNumber = sender.split('@')[0]
             const botNumber = conn.user.id.split(':')[0]
             const pushname = mek.pushName || 'Sin Nombre'
-	    const ownbot = '94711453361'
+	    const ownbot = '94773416477'
 	    const isownbot = ownbot?.includes(senderNumber)
-            const vajira = '94711453097'
+            const vajira = '94773416478'
             const isVajira = vajira?.includes(senderNumber)
-	    const developers = '94711453361'
+	    const developers = '94773416478'
             const isbot = botNumber.includes(senderNumber)
 	    const isdev = developers.includes(senderNumber) 	    
-            let epaneda ='94711453361'
+            let epaneda ='94773416478'
             const epada = epaneda.split(",")	    
             const isDev = [ ...epada ].map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(sender)
 	    const botNumber2 = await jidNormalizedUser(conn.user.id)
