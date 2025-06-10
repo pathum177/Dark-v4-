@@ -6,8 +6,8 @@ const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, 
 
 
 cmd({
-    pattern: "menu",
-    react: "📂",
+    pattern: "alive",
+    react: "🧬",
     desc: "Check bot Commands.",
     category: "main",
     filename: __filename
@@ -60,7 +60,16 @@ cmd({
                         title: "MENU📃",
                         sections: buttonSections
                     })
-                }
+                },
+            {
+                buttonId: "quick_reply",
+                buttonText: { displayText: "ALIVE" },                          {
+                type: 4,
+                nativeFlowInfo: {
+                    name: "quick_reply",
+                    paramsJson: JSON.stringify({
+                        title: "ALIVE",
+                    })
             }
         ];
 
